@@ -1,0 +1,120 @@
+@font-face {
+    font-family: charter;
+    src: url("../fonts/Charter\ Regular.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: charter;
+    src: url("../fonts/Charter\ Italic.otf");
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: charter;
+    src: url("../fonts/Charter\ Bold.otf");
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: charter;
+    src: url("../fonts/Charter\ Bold\ Italic.otf");
+    font-style: italic;
+    font-weight: normal;
+}
+
+:root {
+  font-size: 18px;
+    --gris30: #212121;
+    --gris20: #212429;
+    --gris10: #616161;
+   }
+
+body{
+    color: var(--gris30);
+    font-family: 'Roboto', sans-serif;
+    /* font-family: charter; */
+
+}
+
+a {
+    color: var(--gris30);
+}
+
+header a {
+    font-size: 14px;
+    color: var(--gris10);
+    text-decoration: none;
+}
+
+header a:hover {
+    color: var(--gris30);
+
+}
+
+nav details summary {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 60px ;
+}
+
+h2 {
+    font-size: 32px;
+    /* text-decoration: underline; */
+}
+
+h3 {
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 16px;
+}
+
+pre {
+    background: #FEC62E;
+    color: black;
+}
+
+.hero {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.3), transparent), url("../images/patron-header-background.png");
+    height: 350px;
+}
+
+/* ::selection {
+    background:rgba(28, 88, 255, 0.562)
+} */
+
+h3 {
+    counter-increment: titulos;
+
+}
+
+h2 {
+    counter-reset: titulos;
+
+}
+
+
+h3::before {
+    content: counter(titulos) ". ";
+}
+
+h3::after {
+    content: "";
+    width: 32px;
+    height: 4px;
+    background: var(--gris20);
+    display: inline-block;
+}
+
+
+#domimage {
+    width: 95vw;
+}

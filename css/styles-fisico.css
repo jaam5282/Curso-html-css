@@ -1,0 +1,150 @@
+@font-face {
+    font-family: charter;
+    src: url("../fonts/Charter\ Regular.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: charter;
+    src: url("../fonts/Charter\ Italic.otf");
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: charter;
+    src: url("../fonts/Charter\ Bold.otf");
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: charter;
+    src: url("../fonts/Charter\ Bold\ Italic.otf");
+    font-style: italic;
+    font-weight: normal;
+}
+
+:root {
+  font-size: 18px;
+    --gris30: #212121;
+    --gris20: #212429;
+    --gris10: #616161;
+   }
+
+body{
+    color: var(--gris30);
+    font-family: 'Roboto', sans-serif;
+    /* font-family: charter; */
+    margin: 0;
+  }
+
+a {
+    color: var(--gris30);
+}
+
+header a {
+    font-size: 14px;
+    color: var(--gris10);
+    text-decoration: none;
+}
+
+header a:hover {
+    color: var(--gris30);
+
+}
+
+nav details summary {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 60px ;
+    margin-top: 64px;
+    margin-bottom: 16px;
+}
+
+hr {
+    margin: 64px 0;
+}
+
+h2 {
+    font-size: 32px;
+    /* text-decoration: underline; */
+    margin: 64px 0 40px 0;
+}
+
+h3 {
+    font-size: 24px;
+    text-decoration: underline;
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+p {
+    font-size: 16px;
+}
+
+pre {
+    background: #FEC62E;
+    color: black;
+}
+
+blockquote {
+    margin: 32px 0;
+}
+
+.hero {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.3), transparent), url("../images/patron-header-background.png");
+    height: 350px;
+}
+
+.section-content {
+    margin-top:  164px;
+}
+
+.section-content:first-of-type {
+    margin: 0;
+}
+
+.section-content + hr {
+    display: none;
+}
+
+.section-content ol li {
+    line-height: 24px;
+}
+
+.section-content ul li {
+    margin-bottom: 16px;
+}
+
+.section-content h3 {
+    counter-increment: titulos;
+}
+
+.section-content img {
+    margin-top: 40px;
+}
+
+.section-content {
+    counter-reset: titulos;
+}
+
+.section-content h3::before {
+    content: counter(titulos) ". ";
+}
+
+.section-content h3::after {
+    content: "";
+    width: 32px;
+    height: 4px;
+    background: var(--gris20);
+    display: inline-block;
+}
+
+
+#domimage {
+    width: 95vw;
+}
